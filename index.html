@@ -1,1 +1,34 @@
 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch to Moon and Sun</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Switch to Moon and Sun</h1>
+    <img id="celestialImage" src="https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/07/moon_seen_from_space_station/19494773-1-eng-GB/Moon_seen_from_Space_Station_pillars.jpg" alt="Moon">
+    <br><br>
+    <button id="toggleButton">Switch Moon/Sun</button>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', () => {
+            const img = document.getElementById('celestialImage');
+            img.src = img.src.includes('moon_seen_from_space_station') ?
+                'https://th.bing.com/th/id/R.b93ecbd5d86bf78a66bc0562190d1ad4?rik=Cq4QrznUKGbmqQ&riu=http%3a%2f%2fassets.labroots.com%2f_public%2f_files%2fsystem%2fcontent-articles%2fimages%2fprofile%2f1685_4096x4096.jpg&ehk=e9YD7YgrFJu6teTi94X%2f8iotKWc9MRuVSThDJrQcCss%3d&risl=&pid=ImgRaw&r=0' :
+                'https://www.esa.int/var/esa/storage/images/esa_multimedia/images/2019/07/moon_seen_from_space_station/19494773-1-eng-GB/Moon_seen_from_Space_Station_pillars.jpg';
+        });
+    </script>
+</body>
+</html>
+
